@@ -13,6 +13,6 @@ public class WebSockController {
 	@MessageMapping("/user")
 	@SendTo("/topic/user")
 	public UserContent getUser(User user){
-		return new UserContent(user.getName());
+		return new UserContent("Hi "+user.getName());
 	}
 }
